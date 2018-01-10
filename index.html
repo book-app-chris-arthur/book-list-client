@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles/icons.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
-  <link rel="stylesheet" href="styles/modules.css">
+  <link rel="stylesheet" href="styles/modules/book-main.css">
   <title>Book List App</title>
   <script id="book-info-template" type="text/x-handlebars-template">
     <h3>Title: {{title}}</h3>
@@ -17,19 +17,25 @@
 </head>
 <body>
   <h1>Arthur and Chris' Book List</h1>
-  <section id="book-info">
-  
+  <section id="book-info" class="page">
+    <h4>Book Listing</h4>
+    <ul id="book-info-list">
+
+    </ul>
   </section>
   
-  <section class="detail-view container">
-  
-  </section>
+  <section id="detail-view" class="page">Book Details</section>
+
+  <section id="form-view" class="page">Create a New Book</section>
+
+  <section id=error-view"" class="page">Error</section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="scripts/models/book.js"></script>
-  <!--script src="scripts/views/book-view.js"></script>
-  <script src="scripts/error-view.js"></script-->
+  <script src="scripts/views/book-view.js"></script>
+  <!--script src="scripts/error-view.js"></script-->
+  <script src="scripts/controllers/routes.js"></script>
 </body>
 </html>
