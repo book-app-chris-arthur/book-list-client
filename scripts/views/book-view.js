@@ -15,6 +15,7 @@ var app = app || {};
 
   bookView.initDetailView = function() {
     $('#detail-view').append();
+    $('#detail-view').show();
   };
   module.bookView = bookView;
 })(app);

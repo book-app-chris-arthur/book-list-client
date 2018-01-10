@@ -2,15 +2,16 @@
 
 page('/', () => {
   $('.page').hide();
-  app.fetchAll().then(books => {
+  app.Book.fetchAll().then(books => {
     app.bookView.initIndexPage(books);
   });
 });
 
 page('/books/:id', () => {
   $('.page').hide();
-  app.Book.fetchOne().then();
-  $('#detail-view').show();
+  app.Book.fetchOne().then(books => {
+    app.bookView.initDetailView(books);
+  });
 });
 
 page('/books/create', () => {
