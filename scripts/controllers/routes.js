@@ -1,28 +1,31 @@
 'use strict';
 
-page('/', () => {
+page('/*', (ctx, next) => {
   $('.page').hide();
+  next();
+});
+
+page('/', () => {
   app.Book.fetchAll().then(books => {
     app.bookView.initIndexPage(books);
   });
 });
 
-page('/books/:id', () => {
-  $('.page').hide();
-  app.Book.fetchOne().then(books => {
-    app.bookView.initDetailView(books);
+page('/books/:id', (ctx) => {
+  app.Book.fetchOne(ctx.params.id).then(book => {
+    console.log(book);
+    app.bookView.initDetailView(book);
   });
 });
 
 page('/books/create', () => {
-  $('.page').hide();
-  $('#form-view').show();
+  app.Book.create();
+  app.bookView.initCreateView();
 });
 
 page('/error', () => {
   $('.page').hide();
   $('#error-view').show();
-
 });
 
 page.start();

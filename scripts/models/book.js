@@ -17,11 +17,11 @@ var app = app || {};
   };
 
   Book.fetchOne = (id) => {
-    return $.getJSON(`${app_url}/:${id}`).catch(err => console.error(err));
+    return $.getJSON(`${app_url}/${id}`).catch(err => console.error(err));
   };
 
-  Book.create = function(book) {
-    $.post(app_url, book);
+  Book.create = (book) => {
+    $.post(app_url, book).catch(err => console.error(err));
   };
 
   module.Book = Book;

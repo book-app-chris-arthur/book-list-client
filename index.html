@@ -24,16 +24,26 @@
     </ul>
   </section>
   
-  <section id="detail-view" class="page">Book Details</section>
+  <section id="detail-view" class="page">
+    <h4>Book Details</h4>
 
-  <section id="form-view" class="page">
+  </section>
+
+  <section id="create-view" class="page">
     <h4>Create a New Book</h4>
     <form action="">
-
+      <input type="text" id="title" placeholder="Title" required>
+      <input type="text" id="author" placeholder="Author Name" required>
+      <input type="text" id="isbn" placeholder="ISBN" required>
+      <input type="text" id="image_url" placeholder="URL" required>
+      <input type="text" id="description" placeholder="Description" required>
+      <button type="submit">Create New Book Record</button>
     </form>
   </section>
 
-  <section id=error-view"" class="page">Error</section>
+  <section id=error-view"" class="page">
+    <h4>Error</h4>
+  </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
