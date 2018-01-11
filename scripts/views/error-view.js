@@ -6,7 +6,7 @@ const app = app || {};
   var errorView = {};
 
   errorView.initErrorPage = err => {
-    $('.container').hide();
+    $('.page').hide();
     $('.error-view').show();
     $('#error-message').empty();
     var template = Handlebars.compile($('#error-template').text());
