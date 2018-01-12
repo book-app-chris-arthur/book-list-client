@@ -8,6 +8,7 @@ var app = app || {};
   bookView.initIndexPage = function(books) {
     console.log(books);
     $('.page').hide();
+    $('#nav-list').hide();
     $('#book-info-list').empty();
     books.forEach(book => {
       $('#book-info-list').append(`<li data-id="${book.book_id}">"${book.title}," by ${book.author}</li>`);
@@ -29,6 +30,10 @@ var app = app || {};
       page('/books/create');
     });
   };
+
+  $('#icon-menu').on('click', () => {
+    $('#nav-list').toggle();
+  });
 
   bookView.initDetailView = function(book) {
     console.log(book);
