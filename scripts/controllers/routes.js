@@ -19,7 +19,6 @@ page('/books/:id', (ctx) => {
 });
 
 page('/books/create', () => {
-  app.Book.create();
   app.bookView.initCreateView();
 });
 

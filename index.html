@@ -25,18 +25,31 @@
   </section>
   
   <section id="detail-view" class="page">
-    <h4>Book Details</h4>
+    <!-- <h4>Book Details</h4> -->
 
   </section>
 
   <section id="create-view" class="page">
     <h4>Create a New Book</h4>
-    <form action="">
-      <input type="text" id="title" placeholder="Title" required>
-      <input type="text" id="author" placeholder="Author Name" required>
-      <input type="text" id="isbn" placeholder="ISBN" required>
-      <input type="text" id="image_url" placeholder="URL" required>
-      <input type="text" id="description" placeholder="Description" required>
+    <form id="new-book-form">
+      <label>
+        <input type="text" id="form-title" placeholder="Title" required>
+      </label>
+
+      <label>
+        <input type="text" id="form-author" placeholder="Author Name" required>
+      </label>
+
+      <label>
+        <input type="text" id="form-isbn" placeholder="ISBN" required>
+      </label>
+      
+      <label>
+        <input type="text" id="form-image_url" placeholder="URL" required>
+      </label>
+      <label>
+        <textarea type="text" id="form-description" placeholder="Description" required></textarea>
+      </label>
       <button type="submit">Create New Book Record</button>
     </form>
   </section>
