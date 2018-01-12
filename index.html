@@ -17,6 +17,13 @@
 </head>
 <body>
   <h1>Arthur and Chris' Book List</h1>
+  <nav class="main-nav">
+    <div class="icon-menu"></div>
+    <ul>
+      <li class="tab" id="nav-home">Home</li>
+      <li class="tab" id="nav-create">Create New Book Record</li>
+    </ul>
+  </nav>
   <section id="book-info" class="page">
     <h4>Book Listing</h4>
     <ul id="book-info-list">
@@ -25,7 +32,6 @@
   </section>
   
   <section id="detail-view" class="page">
-    <!-- <h4>Book Details</h4> -->
 
   </section>
 
@@ -33,22 +39,22 @@
     <h4>Create a New Book</h4>
     <form id="new-book-form">
       <label>
-        <input type="text" id="form-title" placeholder="Title" required>
+        <input type="text" id="form-title" class="input" placeholder="Title" required>
       </label>
 
       <label>
-        <input type="text" id="form-author" placeholder="Author Name" required>
+        <input type="text" id="form-author" class="input" placeholder="Author Name" required>
       </label>
 
       <label>
-        <input type="text" id="form-isbn" placeholder="ISBN" required>
+        <input type="text" id="form-isbn" class="input" placeholder="ISBN" required>
       </label>
       
       <label>
-        <input type="text" id="form-image_url" placeholder="URL" required>
+        <input type="text" id="form-image_url" class="input" placeholder="URL" required>
       </label>
       <label>
-        <textarea type="text" id="form-description" placeholder="Description" required></textarea>
+        <textarea type="text" id="form-description" class="input" placeholder="Description" required></textarea>
       </label>
       <button type="submit">Create New Book Record</button>
     </form>

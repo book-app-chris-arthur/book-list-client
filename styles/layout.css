@@ -1,0 +1,8 @@
+/* NAVIGATION */
+.tab {
+  list-style: none;
+  display: inline;
+  margin-right: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+}

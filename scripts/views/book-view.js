@@ -20,6 +20,14 @@ var app = app || {};
       console.log('book_id = ', $book_id);
       page('/books/' + $book_id);
     });
+
+    $('#nav-home').on('click', () => {
+      page('/');
+    });
+
+    $('#nav-create').on('click', () => {
+      page('/books/create');
+    });
   };
 
   bookView.initDetailView = function(book) {
@@ -33,8 +41,9 @@ var app = app || {};
   };
 
   bookView.initCreateView = function() {
+    console.log('create view showing!');
     $('.page').hide();
-    $('#new-book-form').empty();
+    $('.input').empty();
     $('#create-view').show();
     $('#new-book-form').on('submit', event => {
       event.preventDefault();
