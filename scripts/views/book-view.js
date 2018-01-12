@@ -42,11 +42,12 @@ var app = app || {};
     $('#detail-view').append(`<img src="${book.image_url}">`);
     $('#detail-view').append(`<p>${book.title}</p>`);
     $('#detail-view').append(`<p>${book.author}</p>`);
+    $('#detail-view').append(`<button type="button" data-id="${book.book_id}" id="update-btn">Update Record</button>`);
+    $('#detail-view').append(`<button type="button" data-id="${book.book_id}" id="delete-btn">Delete Record</button>`);
     $('#detail-view').show();
   };
 
   bookView.initCreateView = function() {
-    console.log('create view showing!');
     $('.page').hide();
     $('.input').empty();
     $('#create-view').show();

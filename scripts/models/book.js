@@ -24,5 +24,7 @@ var app = app || {};
     $.post(app_url, book).catch(err => console.error(err));
   };
 
+  Book.update = () => {};
+
   module.Book = Book;
 })(app);
