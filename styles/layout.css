@@ -6,3 +6,9 @@
   font-size: 1.2em;
   font-weight: bold;
 }
+
+.icon-menu {
+  position: relative;
+  bottom: 3vw;
+  float: right;
+}
