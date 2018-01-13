@@ -10,6 +10,7 @@ var app = app || {};
     $('.page').hide();
     $('#nav-list').hide();
     $('#book-info-list').empty();
+    $('#icon-menu').show();
     books.forEach(book => {
       $('#book-info-list').append(`<li data-id="${book.book_id}">"${book.title}" by ${book.author}</li>`);
       $('#book-info-list').append(`<img src="${book.image_url}">`);
@@ -22,14 +23,19 @@ var app = app || {};
       page('/books/' + $book_id);
     });
 
-    $('#nav-home').on('click', () => {
-      page('/');
-    });
-
-    $('#nav-create').on('click', () => {
-      page('/books/create');
-    });
   };
+
+  $('#nav-home').on('click', () => {
+    page('/');
+  });
+
+  $('#nav-create').on('click', () => {
+    page('/books/create');
+  });
+
+  $('#admin-link').on('click', () => {
+    page('/admin');
+  });
 
   $('#icon-menu').on('click', () => {
     $('#nav-list').toggle();
@@ -40,11 +46,11 @@ var app = app || {};
     $('.page').hide();
     $('#detail-view').empty();
     $('#detail-view').append(`<img src="${book.image_url}">`);
-    $('#detail-view').append(`<p>${book.title}</p>`);
+    $('#detail-view').append(`<h2>"${book.title}"</h2>`);
     $('#detail-view').append(`<p>${book.author}</p>`);
     $('#detail-view').append(`<button type="button" data-id="${book.book_id}" id="update-btn">Update Record</button>`);
     $('#detail-view').append(`<button type="button" data-id="${book.book_id}" id="delete-btn">Delete Record</button>`);
-    $('#detail-view').show();
+    $('#detail-view, #icon-menu').show();
 
     $('#update-btn').on('click', (event) => {
       page(`/books/${$(event.target).data('id')}/update`);
@@ -58,7 +64,7 @@ var app = app || {};
   bookView.initCreateView = function() {
     $('.page').hide();
     $('.input').empty();
-    $('#create-view').show();
+    $('#create-view, #icon-menu').show();
     $('#new-book-form').on('submit', event => {
       event.preventDefault();
       var newBook = new app.Book({
@@ -78,7 +84,7 @@ var app = app || {};
   bookView.initUpdateView = function(book) {
     console.log(book);
     $('.page').hide();
-    $('#detail-view').show();
+    $('#detail-view, #icon-menu').show();
     // $('.input').empty();
     $('#update-view').show();
     $('#update-title').val(book.title);

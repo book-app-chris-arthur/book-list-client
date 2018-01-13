@@ -18,6 +18,11 @@ page('/books/create', () => {
   //app.Book.create();
 });
 
+page('/admin', (ctx) => {
+  app.adminView.initAdminView();
+  app.adminView.verify();
+});
+
 page('/books/:id', (ctx) => {
   app.Book.fetchOne(ctx.params.id).then(book => {
     app.bookView.initDetailView(book);

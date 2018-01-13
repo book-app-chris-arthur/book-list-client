@@ -18,7 +18,7 @@ hr {
   width: 80%;
 }
 
-h1, h4 {
+h1, h2, h4 {
   text-align: center;
 }
 
@@ -39,7 +39,15 @@ li {
 /*TEXT STYLES
 =======================================*/
 p {
-  font-size: 1em;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3em;
 }
 
 address {
@@ -66,27 +74,26 @@ label {
 }
 
 input {
-  width: 100%;
+  width: 50%;
   margin: .5em 0;
-  border: 1px solid #ccc;
-  border-width: 0 0 1px 0;
+  border: 1px solid black;
   border-radius: 0;
   color: darkslategrey;
 }
 
 textarea {
-  width: 100%;
+  width: 50%;
   margin: .5em 0;
   font-size: 0.3em;
   color: darkslategrey;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 0;
 }
 
-input:invalid, textarea:invalid {
+/* input:invalid, textarea:invalid {
   border-color: #AE3F3C;
 }
 
 input:valid, textarea:valid {
   border-color: #89CB8E;
-}
+} */

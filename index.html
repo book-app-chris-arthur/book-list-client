@@ -17,12 +17,13 @@
   </script>
 </head>
 <body>
-  <h1>Arthur and Chris' Book List</h1>
-  <nav class="main-nav">
+  <h1 id="main-header">Arthur and Chris' Book List</h1>
+  <nav id="main-nav" class="main-nav">
     <div class="icon-menu" id="icon-menu"></div>
     <ul id="nav-list">
       <li class="tab" id="nav-home">Home</li>
       <li class="tab" id="nav-create">Create New Book Record</li>
+      <li class="tab" id="admin-link">Admin</li>
     </ul>
   </nav>
   <section id="book-info" class="page">
@@ -55,7 +56,7 @@
       </label>
       <label>
         <textarea type="text" id="form-description" class="input" placeholder="Description" required></textarea>
-      </label>
+      </label><br>
       <button type="submit">Create New Book Record</button>
     </form>
   </section>
@@ -80,8 +81,17 @@
       </label>
       <label>
         <textarea type="text" id="update-description" class="input" name="Description" placeholder="Description" required></textarea>
-      </label>
+      </label><br>
       <button type="submit">Update Book Record</button>
+    </form>
+  </section>
+
+  <section id="admin-view" class="page">
+    <h4>Please Log-In Here</h4>
+    <form id="login-form">
+      <label >
+        <input type="text" id="passphrase" class="input" name="passphrase" placeholder="Enter Password" required>
+      </label>
     </form>
   </section>
 
@@ -94,6 +104,7 @@
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="scripts/models/book.js"></script>
   <script src="scripts/views/book-view.js"></script>
+  <script src="scripts/views/admin-view.js"></script>
   <!--script src="scripts/error-view.js"></script-->
   <script src="scripts/controllers/routes.js"></script>
 </body>
