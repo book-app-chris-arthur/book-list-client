@@ -45,6 +45,11 @@ var app = app || {};
     $('#detail-view').append(`<button type="button" data-id="${book.book_id}" id="update-btn">Update Record</button>`);
     $('#detail-view').append(`<button type="button" data-id="${book.book_id}" id="delete-btn">Delete Record</button>`);
     $('#detail-view').show();
+
+    $('#update-btn').on('click', () => {
+      page('/books/:id/update');
+    });
+    $('#delete-btn').on('click', () => {});
   };
 
   bookView.initCreateView = function() {
@@ -66,6 +71,24 @@ var app = app || {};
       window.location = '../';
     });
   };
+
+  bookView.initUpdateView = function(ctx) {
+    $('.page').hide();
+    $('.input').empty();
+    $('#update-view').show();
+    $('#update-title').val(ctx.title);
+    $('#update-author').val(ctx.author);
+    $('#update-isbn').val(ctx.isbn);
+    $('#update-image_url').val(ctx.image_url);
+    $('#update-description').val(ctx.description);
+    $('#update-book-form').on('submit', event => {
+      event.preventDefault();
+      var updateInfo = $(this).serializeArray();
+      app.Book.update(ctx.book_id, updateInfo);
+    });
+  };
+
+  bookView.initDeleteView = function() {};
 
   module.bookView = bookView;
 })(app);

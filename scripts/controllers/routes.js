@@ -24,6 +24,10 @@ page('/books/:id', (ctx) => {
   });
 });
 
+page('/books/:id/update', (ctx) => {
+  app.bookView.initUpdateView(ctx.params.id);
+});
+
 page('/error', () => {
   $('.page').hide();
   $('#error-view').show();
