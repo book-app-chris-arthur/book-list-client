@@ -1,5 +1,6 @@
 img {
   max-width: 100%;
+  margin-bottom: 2em;
 }
 
 body {
@@ -17,8 +18,22 @@ hr {
   width: 80%;
 }
 
-h1 {
+h1, h4 {
   text-align: center;
+}
+
+section {
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 /*TEXT STYLES

@@ -9,6 +9,7 @@
 
 .icon-menu {
   position: relative;
-  bottom: 3vw;
+  bottom: 5vw;
   float: right;
+  font-size: 2em;
 }
