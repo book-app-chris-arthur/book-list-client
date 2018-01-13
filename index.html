@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules/book-main.css">
+  <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
   <title>Book List App</title>
   <script id="book-info-template" type="text/x-handlebars-template">
     <h3>Title: {{title}}</h3>
@@ -17,26 +18,44 @@
 </head>
 <body>
   <h1>Arthur and Chris' Book List</h1>
+  <nav class="main-nav">
+    <div class="icon-menu" id="icon-menu"></div>
+    <ul id="nav-list">
+      <li class="tab" id="nav-home">Home</li>
+      <li class="tab" id="nav-create">Create New Book Record</li>
+    </ul>
+  </nav>
   <section id="book-info" class="page">
-    <h4>Book Listing</h4>
     <ul id="book-info-list">
 
     </ul>
   </section>
   
   <section id="detail-view" class="page">
-    <h4>Book Details</h4>
 
   </section>
 
   <section id="create-view" class="page">
     <h4>Create a New Book</h4>
-    <form action="">
-      <input type="text" id="title" placeholder="Title" required>
-      <input type="text" id="author" placeholder="Author Name" required>
-      <input type="text" id="isbn" placeholder="ISBN" required>
-      <input type="text" id="image_url" placeholder="URL" required>
-      <input type="text" id="description" placeholder="Description" required>
+    <form id="new-book-form">
+      <label>
+        <input type="text" id="form-title" class="input" placeholder="Title" required>
+      </label>
+
+      <label>
+        <input type="text" id="form-author" class="input" placeholder="Author Name" required>
+      </label>
+
+      <label>
+        <input type="text" id="form-isbn" class="input" placeholder="ISBN" required>
+      </label>
+      
+      <label>
+        <input type="text" id="form-image_url" class="input" placeholder="URL" required>
+      </label>
+      <label>
+        <textarea type="text" id="form-description" class="input" placeholder="Description" required></textarea>
+      </label>
       <button type="submit">Create New Book Record</button>
     </form>
   </section>

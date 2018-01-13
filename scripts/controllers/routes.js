@@ -1,26 +1,27 @@
 'use strict';
 
-page('/*', (ctx, next) => {
-  $('.page').hide();
-  next();
-});
+// page('/*', (ctx, next) => {
+//   $('.page').hide();
+//   next();
+// });
 
 page('/', () => {
+  console.log('home page');
   app.Book.fetchAll().then(books => {
     app.bookView.initIndexPage(books);
   });
 });
 
-page('/books/:id', (ctx) => {
-  app.Book.fetchOne(ctx.params.id).then(book => {
-    console.log(book);
-    app.bookView.initDetailView(book);
-  });
+page('/books/create', () => {
+  console.log('create route successful!');
+  app.bookView.initCreateView();
+  //app.Book.create();
 });
 
-page('/books/create', () => {
-  app.Book.create();
-  app.bookView.initCreateView();
+page('/books/:id', (ctx) => {
+  app.Book.fetchOne(ctx.params.id).then(book => {
+    app.bookView.initDetailView(book);
+  });
 });
 
 page('/error', () => {
@@ -28,4 +29,4 @@ page('/error', () => {
   $('#error-view').show();
 });
 
-page.start();
+page();

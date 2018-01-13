@@ -1,0 +1,17 @@
+/* NAVIGATION */
+@media screen and (max-width:640px) {
+  .tab {
+    list-style: none;
+    display: inline;
+    margin-right: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .icon-menu {
+    position: relative;
+    bottom: 10.5vw;
+    float: right;
+    font-size: 2em;
+  }
+}
