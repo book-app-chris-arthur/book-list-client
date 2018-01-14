@@ -17,14 +17,18 @@
   </script>
 </head>
 <body>
-  <h1>Arthur and Chris' Book List</h1>
-  <nav class="main-nav">
-    <div class="icon-menu" id="icon-menu"></div>
-    <ul id="nav-list">
-      <li class="tab" id="nav-home">Home</li>
-      <li class="tab" id="nav-create">Create New Book Record</li>
-    </ul>
-  </nav>
+  <header class="header-section">
+      <h1 id="main-header">Arthur and Chris' Book List</h1>
+      <nav id="main-nav" class="main-nav">
+        <div class="icon-menu" id="icon-menu"></div>
+        <ul id="nav-list">
+          <li class="tab" id="nav-home">Home</li>
+          <li class="tab" id="nav-create">Create New Book Record</li>
+          <li class="tab" id="admin-link">Admin</li>
+        </ul>
+      </nav>
+  </header>
+
   <section id="book-info" class="page">
     <ul id="book-info-list">
 
@@ -55,8 +59,42 @@
       </label>
       <label>
         <textarea type="text" id="form-description" class="input" placeholder="Description" required></textarea>
-      </label>
+      </label><br>
       <button type="submit">Create New Book Record</button>
+    </form>
+  </section>
+
+  <section id="update-view" class="page">
+    <h4>Update Existing Book Record</h4>
+    <form id="update-book-form">
+      <label>
+        <input type="text" id="update-title" class="input" name="Title" placeholder="Title" required>
+      </label>
+
+      <label>
+        <input type="text" id="update-author" class="input" name="Author" placeholder="Author Name" required>
+      </label>
+
+      <label>
+        <input type="text" id="update-isbn" class="input" name="ISBN" placeholder="ISBN" required>
+      </label>
+      
+      <label>
+        <input type="text" id="update-image_url" class="input" name="Image-URL" placeholder="URL" required>
+      </label>
+      <label>
+        <textarea type="text" id="update-description" class="input" name="Description" placeholder="Description" required></textarea>
+      </label><br>
+      <button type="submit">Update Book Record</button>
+    </form>
+  </section>
+
+  <section id="admin-view" class="page">
+    <h4>Please Log-In to Update or Delete a Book Record</h4>
+    <form id="login-form">
+      <label >
+        <input type="password" id="passphrase" class="input" name="passphrase" placeholder="Enter Password" required>
+      </label>
     </form>
   </section>
 
@@ -69,6 +107,7 @@
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="scripts/models/book.js"></script>
   <script src="scripts/views/book-view.js"></script>
+  <script src="scripts/views/admin-view.js"></script>
   <!--script src="scripts/error-view.js"></script-->
   <script src="scripts/controllers/routes.js"></script>
 </body>

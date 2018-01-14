@@ -1,5 +1,5 @@
-/* NAVIGATION */
-@media screen and (max-width:640px) {
+@media screen and (max-width: 640px) {
+  /* NAVIGATION */
   .tab {
     list-style: none;
     display: inline;
@@ -7,11 +7,42 @@
     font-size: 1.2em;
     font-weight: bold;
   }
-  
+
   .icon-menu {
     position: relative;
-    bottom: 10.5vw;
+    bottom: 11.5vw;
     float: right;
-    font-size: 2em;
+    font-size: 3em;
+  }
+
+  .page {
+    text-align: center;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .header-section {
+    background-color: slategray;
+    width: 100%;
+    padding: 5%;
+  }
+
+  #isbn {
+    font-size: 1em;
+  }
+
+  #author {
+    font-size: 1em;
+  }
+
+  #description {
+    font-weight: bold;
+  }
+
+  #border {
+    border-bottom: 3px solid white;
+    margin: 2%;
   }
 }

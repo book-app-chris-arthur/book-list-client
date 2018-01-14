@@ -24,5 +24,24 @@ var app = app || {};
     $.post(app_url, book).catch(err => console.error(err));
   };
 
+  Book.destroy = (id) => {
+    $.ajax({
+      url: `${app_url}/${id}`,
+      method: 'DELETE',
+      dataType: 'json'
+    })
+      .then(() => {console.log('Delete successful.');});
+  };
+
+  Book.update = (id, book) => {
+    $.ajax({
+      url: `${app_url}/${id}`,
+      method: 'PUT',
+      dataType: 'json',
+      data: JSON.stringify(book)
+    })
+      .then((updateData) => {console.log(updateData);});
+  };
+
   module.Book = Book;
 })(app);

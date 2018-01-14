@@ -1,44 +1,77 @@
 @media screen and (max-width: 640px) {
-
   img {
     max-width: 100%;
+    margin-bottom: 1.2em;
   }
   
   body {
+    margin: 0;
     line-height: 1.5;
     font-size: 100%;
     color: #313131;
+    background-color: tan;
   }
   
   main {
     margin: 0 20px;
   }
   
+  header {
+    margin-top: 0;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
   hr {
     margin: 1em;
     width: 80%;
   }
   
-  section {
+  h1, h2, h4 {
     text-align: center;
   }
-
+  
+  section {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 5%;
+  }
+  
   nav {
     text-align: center;
+    position: relative;
+    left: 1.2em;
   }
-
-  h1 {
-    text-align: center;
-  }
-
+  
   li {
     list-style: none;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  button {
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: green;
+    color: white;
+    margin: 1%;
   }
   
   /*TEXT STYLES
   =======================================*/
   p {
-    font-size: 1em;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+  }
+  
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
   }
   
   address {
@@ -65,28 +98,29 @@
   }
   
   input {
-    width: 100%;
+    width: 50%;
     margin: .5em 0;
-    border: 1px solid #ccc;
-    border-width: 0 0 1px 0;
+    border: 1px solid black;
     border-radius: 0;
     color: darkslategrey;
+    font-size: 0.5em;
+    padding: 1%;
   }
   
   textarea {
-    width: 100%;
+    width: 50%;
     margin: .5em 0;
     font-size: 0.3em;
     color: darkslategrey;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 0;
   }
   
-  input:invalid, textarea:invalid {
+  /* input:invalid, textarea:invalid {
     border-color: #AE3F3C;
   }
   
   input:valid, textarea:valid {
     border-color: #89CB8E;
-  }
+  } */
 }
