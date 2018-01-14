@@ -1,7 +1,7 @@
 ## book-list-client
-### Code 301 project: front-end deployment of a full-stack book list application 
+### Code 301 project: back-end deployment for the book list application
 
-# Project Name - Lab 12: Extend the Booklist App
+# Project Name - Lab 13: Middleware
 
 **Author**: Chris Lesesne & Arthur Allen
 **Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
@@ -9,7 +9,6 @@
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
 To implement a full stack application for a book list that will render books from a PostgreSQL database
-
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
@@ -24,25 +23,15 @@ Javascript, JSON, SQL, Heroku, Express, PSQL
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource. -->
 
-01-06-2018 9:00am - Set up configurations in preparation for the heavy work.  Set up an organization in Github for the project.
+01-13-2018 9:10am - Basic functionality in the app.  Need to add prepopulated data in the fields.
 
-01-06-2018 11:00am - Set up Heroku. Uninstall PS and references to PS in server.js
+01-13-2018 12:34pm - Met the first five user stories: Able to request information about a single book, able to add new books and is mobile friendly.  Started doing a mobile-only approach.
 
-01-06-2018 12:30pm - Attempt to manually copy and paste database info into our database.  Wonder if single or double quotes are allowed.  Observe that quotes inside the description body can't be escaped with a slash.  Seek help for a solution.
+01-13-2018 3:45pm - Got update and delete buttons to not appear and then appear depending on if we are in admin mode, reached by a password.  Admin functionality working.
 
-01-06-2018 1:30pm - Continue to work on task 4, loading in more information to the database.
+01-13-2018 4:30pm - Worked on additional styling.
 
-01-06-2018 2:00pm - Migrating to local database. (Task 5.)
-
-01-06-2018 2:53pm - Tried migrating to remote database.
-
-01-06-2018 4:06pm - Started Task 6: Request all resources from the database through a RESTful endpoint.
-
-01-06-2018 4:44pm - Added functionality on client side, connects to remote database. 
-
-01-06-2018 5:00pm - Got text headline data and book count to display on the website.
-
-01-06-2018 5:45pm - Deployed version still doesn't display formated data.
+01-13-2018 4:50pm - Added button functionality, styled editing forms.  Added delete function.  Issue with Heroku database communicating with client side.
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
