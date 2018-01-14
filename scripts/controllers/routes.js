@@ -1,9 +1,9 @@
 'use strict';
 
-// page('/*', (ctx, next) => {
-//   $('.page').hide();
-//   next();
-// });
+page('/*', (ctx, next) => {
+  $('.page').hide();
+  next();
+});
 
 page('/', () => {
   console.log('home page');
@@ -15,7 +15,6 @@ page('/', () => {
 page('/books/create', () => {
   console.log('create route successful!');
   app.bookView.initCreateView();
-  //app.Book.create();
 });
 
 page('/admin', () => {
@@ -32,6 +31,7 @@ page('/books/:id', (ctx) => {
 
 page('/books/:id/update', (ctx) => {
   app.Book.fetchOne(ctx.params.id).then(book => {
+    app.bookView.initDetailView(book);
     app.bookView.initUpdateView(book);
   });
 });

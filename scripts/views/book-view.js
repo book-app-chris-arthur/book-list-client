@@ -32,6 +32,15 @@ var flag = false;
       page('/books/' + $book_id);
     });
 
+    $('#update-btn').on('click', (event) => {
+      console.log('update button clicked');
+      page(`/books/${$(event.target).data('id')}/update`);
+    });
+
+    $('#delete-btn').on('click', (event) => {
+      console.log('Book record deleted!');
+      app.Book.destroy($(event.target).data('id'));
+    });
   };
 
   $('#nav-home').on('click', () => {
@@ -54,7 +63,6 @@ var flag = false;
   });
 
   bookView.initDetailView = function(book) {
-    // console.log(book);
     $('.page').hide();
     $('#detail-view').empty();
     $('#detail-view').append(`<img src="${book.image_url}">`);
@@ -65,18 +73,6 @@ var flag = false;
     $('#detail-view, #icon-menu').show();
 
     $('#update-btn, #delete-btn').hide();
-
-    $('#admin-link').on('click', () => {
-      page('/admin');
-    });
-
-    $('#update-btn').on('click', () => {
-      page(`/books/${$(event.target).data('id')}/update`);
-    });
-
-    $('#delete-btn').on('click', () => {
-
-    });
   };
 
   bookView.initCreateView = function() {
@@ -115,8 +111,6 @@ var flag = false;
       app.Book.update(book.book_id, updateInfo);
     });
   };
-
-  bookView.initDeleteView = function() {};
 
   module.bookView = bookView;
 })(app);

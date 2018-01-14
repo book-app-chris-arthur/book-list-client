@@ -98,6 +98,8 @@
     border: 1px solid black;
     border-radius: 0;
     color: darkslategrey;
+    font-size: 0.5em;
+    padding: 1%;
   }
   
   textarea {

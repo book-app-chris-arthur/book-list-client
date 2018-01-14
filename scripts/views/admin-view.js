@@ -7,7 +7,6 @@ var app = app || {};
   const pass = 'admin';
 
   adminView.initAdminView = function() {
-    // disable access to update/delete buttons unless password is verified
     $('.page').hide();
     $('#admin-view, #icon-menu').show();
   };
@@ -18,7 +17,7 @@ var app = app || {};
       if($('#passphrase').val() === pass) {
         console.log('admin entered correctly: ', pass);
         page('/');
-        flag = true;
+        flag = true; // this serves to show update/delete buttons if password verified
       }
       else {console.log('Incorrect password...');}
     });
