@@ -9,6 +9,7 @@
     line-height: 1.5;
     font-size: 100%;
     color: #313131;
+    background-color: tan;
   }
   
   main {
@@ -18,7 +19,9 @@
   header {
     margin-top: 0;
     box-sizing: border-box;
-    padding: 2%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
   }
 
   hr {
@@ -38,6 +41,8 @@
   
   nav {
     text-align: center;
+    position: relative;
+    left: 1.2em;
   }
   
   li {

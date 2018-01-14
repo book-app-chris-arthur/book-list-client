@@ -20,6 +20,7 @@ var flag = false;
       $('#book-info-list').append(`<p id="description">${book.description}</p>`);
       $('#book-info-list').append(`<button type="button" data-id="${book.book_id}" id="update-btn">Update Record</button>`);
       $('#book-info-list').append(`<button type="button" data-id="${book.book_id}" id="delete-btn">Delete Record</button>`);
+      $('#book-info-list').append('<div id="border"></div>');
     });
     $('#book-info').show();
 
