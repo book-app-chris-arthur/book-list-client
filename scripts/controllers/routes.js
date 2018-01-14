@@ -18,8 +18,9 @@ page('/books/create', () => {
   //app.Book.create();
 });
 
-page('/admin', (ctx) => {
+page('/admin', () => {
   app.adminView.initAdminView();
+  console.log('admin route success');
   app.adminView.verify();
 });
 

@@ -17,15 +17,18 @@
   </script>
 </head>
 <body>
-  <h1 id="main-header">Arthur and Chris' Book List</h1>
-  <nav id="main-nav" class="main-nav">
-    <div class="icon-menu" id="icon-menu"></div>
-    <ul id="nav-list">
-      <li class="tab" id="nav-home">Home</li>
-      <li class="tab" id="nav-create">Create New Book Record</li>
-      <li class="tab" id="admin-link">Admin</li>
-    </ul>
-  </nav>
+  <header class="header-section">
+      <h1 id="main-header">Arthur and Chris' Book List</h1>
+      <nav id="main-nav" class="main-nav">
+        <div class="icon-menu" id="icon-menu"></div>
+        <ul id="nav-list">
+          <li class="tab" id="nav-home">Home</li>
+          <li class="tab" id="nav-create">Create New Book Record</li>
+          <li class="tab" id="admin-link">Admin</li>
+        </ul>
+      </nav>
+  </header>
+
   <section id="book-info" class="page">
     <ul id="book-info-list">
 
@@ -90,7 +93,7 @@
     <h4>Please Log-In Here</h4>
     <form id="login-form">
       <label >
-        <input type="text" id="passphrase" class="input" name="passphrase" placeholder="Enter Password" required>
+        <input type="password" id="passphrase" class="input" name="passphrase" placeholder="Enter Password" required>
       </label>
     </form>
   </section>
