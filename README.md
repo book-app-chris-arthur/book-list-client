@@ -1,7 +1,7 @@
 ## book-list-client
 ### Code 301 project: front-end deployment of a full-stack book list application 
 
-# Project Name - Lab 11: Production Deployment w/ Heroku
+# Project Name - Lab 12: Extend the Booklist App
 
 **Author**: Chris Lesesne & Arthur Allen
 **Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
