@@ -3,8 +3,8 @@
 var app = app || {};
 
 (function(module) {
-  const app_url = 'http://localhost:3000/api/v1/books';
-  //const app_url = 'https://cl-aa-booklist.herokuapp.com/api/v1/books';
+  // const app_url = 'http://localhost:3000/api/v1/books';
+  const app_url = 'https://cl-aa-booklist.herokuapp.com/api/v1/books';
 
   function Book() {
 
